@@ -1,3 +1,21 @@
+# 🚀 AlgoStruct
+
+**AlgoStruct** is a structured Java-based library for practicing and mastering **Data Structures and Algorithms (DSA)** through hands-on implementation.
+
+---
+
+## 📌 Objective
+
+* Strengthen DSA concepts through implementation
+* Build a reusable Java library of data structures
+* Improve problem-solving skills
+* Maintain a clean and scalable project structure
+
+---
+
+## 📁 Project Structure
+
+```
 AlgoStruct/
 │
 ├── src/
@@ -76,3 +94,46 @@ AlgoStruct/
 ├── README.md
 ├── pom.xml 
 └── .gitignore
+```
+
+---
+
+## 🧠 Topics Covered
+
+* Arrays
+* Strings
+* Linked Lists
+* Stacks
+* Queues
+* Trees
+* Heaps
+* HashMaps
+* Graphs
+* Recursion & Backtracking
+* Algorithms (Greedy, DP, Divide & Conquer)
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* IntelliJ IDEA
+* Maven
+
+---
+
+## 🛠️ Run the Project
+
+```
+git clone https://github.com/rakshitsharma0402/AlgoStruct.git
+```
+
+Open in IntelliJ → Run `Main.java`
+
+---
+
+## 📖 Reference
+
+This project is based on a structured approach to building a reusable DSA library in Java 
+
+---
