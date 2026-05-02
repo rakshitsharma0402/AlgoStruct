@@ -8,6 +8,14 @@ public class SinglyLinkedList {
         return head == null;
     }
 
+    public int size() {
+        int count = 0;
+        for (Node curr = head; curr != null; curr = curr.next) {
+            count++;
+        }
+        return count;
+    }
+
     public void traverse() {
         if (isEmpty()) {
             System.out.println("Linked List is Empty");
@@ -28,5 +36,10 @@ public class SinglyLinkedList {
         Node temp = new Node(x);
         temp.next = head;
         head = temp;
+    }
+
+    public void insertAtEnd(int x) {
+        Node temp = new Node(x);
+        for()
     }
 }
