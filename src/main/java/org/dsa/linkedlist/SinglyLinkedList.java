@@ -4,9 +4,13 @@ public class SinglyLinkedList {
 
     private Node head;
 
-    public void traversal() {
-        if (head == null) {
-            System.out.println("List is empty");
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void traverse() {
+        if(isEmpty()) {
+            System.out.print("Linked List is Empty");
             return;
         }
 
