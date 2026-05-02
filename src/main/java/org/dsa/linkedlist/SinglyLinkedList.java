@@ -9,8 +9,8 @@ public class SinglyLinkedList {
     }
 
     public void traverse() {
-        if(isEmpty()) {
-            System.out.print("Linked List is Empty");
+        if (isEmpty()) {
+            System.out.println("Linked List is Empty");
             return;
         }
 
@@ -24,4 +24,9 @@ public class SinglyLinkedList {
         System.out.println("null");
     }
 
+    public void insertAtBeginning(int x) {
+        Node temp = new Node(x);
+        temp.next = head;
+        head = temp;
+    }
 }
