@@ -33,13 +33,25 @@ public class SinglyLinkedList {
     }
 
     public void insertAtBeginning(int x) {
-        Node temp = new Node(x);
-        temp.next = head;
-        head = temp;
+        Node new_node = new Node(x);
+        new_node.next = head;
+        head = new_node;
     }
 
     public void insertAtEnd(int x) {
-        Node temp = new Node(x);
-        for()
+        Node new_node = new Node(x);
+
+        if (isEmpty()) {
+            head = new_node;
+            return;
+        }
+
+        Node curr = head;
+
+        while (curr.next != null) {
+            curr = curr.next;
+        }
+
+        curr.next = new_node;
     }
 }
