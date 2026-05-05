@@ -67,9 +67,7 @@ public class SinglyLinkedList {
         Node newNode = new Node(val);
 
         if (isEmpty()) {
-            head = newNode;
-            size++;
-            return;
+            insertAtBeginning(val);
         }
 
         Node curr = head;
@@ -83,7 +81,7 @@ public class SinglyLinkedList {
 
     /**
      * Insert at specific position (0-based)
-     * TC: O(n)
+     * TC: O(pos)
      * SC: O(1)
      */
     public void insertAtPosition(int val, int pos) {
