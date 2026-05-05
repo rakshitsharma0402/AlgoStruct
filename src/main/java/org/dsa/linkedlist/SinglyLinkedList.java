@@ -1,57 +1,97 @@
 package org.dsa.linkedlist;
 
+/**
+ * Singly Linked List implementation for DSA library.
+ */
 public class SinglyLinkedList {
 
     private Node head;
+    private int size;
 
+    /**
+     * Check if list is empty
+     */
     public boolean isEmpty() {
-        return head == null;
+        return size == 0;
     }
 
+    /**
+     * Get size in O(1)
+     */
     public int size() {
-        int count = 0;
-        for (Node curr = head; curr != null; curr = curr.next) {
-            count++;
-        }
-        return count;
+        return size;
     }
 
+    /**
+     * Traverse list
+     */
     public void traverse() {
         if (isEmpty()) {
-            System.out.println("Linked List is Empty");
+            throw new IndexOutOfBoundsException("Linked List is Empty");
             return;
         }
 
         Node curr = head;
-
         while (curr != null) {
             System.out.print(curr.data + " -> ");
             curr = curr.next;
         }
-
         System.out.println("null");
     }
 
-    public void insertAtBeginning(int x) {
-        Node new_node = new Node(x);
-        new_node.next = head;
-        head = new_node;
+    /**
+     * Insert at beginning
+     */
+    public void insertAtBeginning(int val) {
+        Node newNode = new Node(val);
+        newNode.next = head;
+        head = newNode;
+        size++;
     }
 
-    public void insertAtEnd(int x) {
-        Node new_node = new Node(x);
+    /**
+     * Insert at end
+     */
+    public void insertAtEnd(int val) {
+        Node newNode = new Node(val);
 
         if (isEmpty()) {
-            head = new_node;
+            head = newNode;
+            size++;
             return;
         }
 
         Node curr = head;
-
         while (curr.next != null) {
             curr = curr.next;
         }
 
-        curr.next = new_node;
+        curr.next = newNode;
+        size++;
+    }
+
+    /**
+     * Insert at specific position (0-based)
+     */
+    public void insertAtPosition(int val, int pos) {
+        if (pos < 0 || pos > size) {
+            throw new IndexOutOfBoundsException("Invalid position: " + pos);
+        }
+
+        if (pos == 0) {
+            insertAtBeginning(val);
+            return;
+        }
+
+        Node newNode = new Node(val);
+        Node curr = head;
+
+        for (int i = 0; i < pos - 1; i++) {
+            curr = curr.next;
+        }
+
+        newNode.next = curr.next;
+        curr.next = newNode;
+        size++;
     }
 }
