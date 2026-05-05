@@ -112,7 +112,7 @@ public class SinglyLinkedList {
      * SC: O(1)
      */
     public void deleteAtBeginning() {
-        if(isEmpty())
+        if (isEmpty())
             throw new IndexOutOfBoundsException("Linked List Empty");
 
         head = head.next;
@@ -125,11 +125,11 @@ public class SinglyLinkedList {
      * SC: O(1)
      */
     public void deleteAtEnd() {
-        if(isEmpty())
+        if (isEmpty())
             throw new IndexOutOfBoundsException("Linked List Empty");
 
         Node curr = head;
-        while(curr.next.next != null) {
+        while (curr.next.next != null) {
             curr = curr.next;
         }
 
@@ -143,15 +143,15 @@ public class SinglyLinkedList {
      * SC: O(1)
      */
     public void deleteAtPosition(int pos) {
-        if(pos < 0 || pos >= size)
-            throw new IndexOutOfBoundsException("Invalid Position" +pos);
+        if (pos < 0 || pos >= size)
+            throw new IndexOutOfBoundsException("Invalid Position" + pos);
 
-        if(pos == 0) {
+        if (pos == 0) {
             deleteAtBeginning();
         }
 
         Node curr = head;
-        for(int i=0; i<pos-1; i++) {
+        for (int i = 0; i < pos - 1; i++) {
             curr = curr.next;
         }
 
@@ -159,5 +159,42 @@ public class SinglyLinkedList {
         size--;
     }
 
+    /**
+     * Search for a value and return its index (0-based)
+     * Returns -1 if not found
+     * TC: O(n)
+     * SC: O(1)
+     */
+    public int search(int val) {
+        Node curr = head;
 
+        int i = 1;
+        while (curr != null) {
+            if (curr.data == val) {
+                return i;
+            }
+            curr = curr.next;
+            i++;
+        }
+
+        return -1;
+    }
+
+    /**
+     * Reverse the linked list (iterative)
+     */
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+        Node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+    }
 }
