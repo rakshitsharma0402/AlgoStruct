@@ -79,18 +79,26 @@ AlgoStruct/
 │                   │   ├── BasicRecursion.java
 │                   │   └── Backtracking.java
 │
-│                       ├── algorithms/
-│                   │   ├── Greedy.java
-│                   │   ├── DynamicProgramming.java
-│                   │   └── DivideAndConquer.java
-│
 │                   ├── utils/
 │                   │   ├── PrintHelper.java
 │                   │   ├── InputHelper.java
 │                   │   └── TestData.java
 │
 │                   └── Main.java
-│
+│   └── test/
+│       └── java/
+│           └── Array.java
+│           └── String.java
+│           └── LinkedList.java
+│           └── Stack.java
+│           └── Queue.java
+│           └── Tree.java
+│           └── Heap.java
+│           └── HashMap.java
+│           └── Graph.java
+│           └── Recursion.java
+│           └── Utils.java
+│           
 ├── README.md
 ├── pom.xml 
 └── .gitignore
