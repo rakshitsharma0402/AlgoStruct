@@ -105,4 +105,59 @@ public class SinglyLinkedList {
         curr.next = newNode;
         size++;
     }
+
+    /**
+     * Delete at beginning
+     * TC: O(1)
+     * SC: O(1)
+     */
+    public void deleteAtBeginning() {
+        if(isEmpty())
+            throw new IndexOutOfBoundsException("Linked List Empty");
+
+        head = head.next;
+        size--;
+    }
+
+    /**
+     * Delete at end
+     * TC: O(n)
+     * SC: O(1)
+     */
+    public void deleteAtEnd() {
+        if(isEmpty())
+            throw new IndexOutOfBoundsException("Linked List Empty");
+
+        Node curr = head;
+        while(curr.next.next != null) {
+            curr = curr.next;
+        }
+
+        curr.next = null;
+        size--;
+    }
+
+    /**
+     * Delete at specific position (0-based)
+     * TC: O(pos)
+     * SC: O(1)
+     */
+    public void deleteAtPosition(int pos) {
+        if(pos < 0 || pos >= size)
+            throw new IndexOutOfBoundsException("Invalid Position" +pos);
+
+        if(pos == 0) {
+            deleteAtBeginning();
+        }
+
+        Node curr = head;
+        for(int i=0; i<pos-1; i++) {
+            curr = curr.next;
+        }
+
+        curr.next = curr.next.next;
+        size--;
+    }
+
+
 }
