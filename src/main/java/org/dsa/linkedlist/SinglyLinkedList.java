@@ -10,6 +10,8 @@ public class SinglyLinkedList {
 
     /**
      * Check if list is empty
+     * TC: O(1)
+     * SC: O(1)
      */
     public boolean isEmpty() {
         return size == 0;
@@ -17,6 +19,8 @@ public class SinglyLinkedList {
 
     /**
      * Get size in O(1)
+     * TC: O(1)
+     * SC: O(1)
      */
     public int size() {
         return size;
@@ -24,6 +28,8 @@ public class SinglyLinkedList {
 
     /**
      * Traverse list
+     * TC: O(n)
+     * SC: O(1)
      */
     public void traverse() {
         if (isEmpty()) {
@@ -40,6 +46,8 @@ public class SinglyLinkedList {
 
     /**
      * Insert at beginning
+     * TC: O(1)
+     * SC: O(1)
      */
     public void insertAtBeginning(int val) {
         Node newNode = new Node(val);
@@ -50,6 +58,10 @@ public class SinglyLinkedList {
 
     /**
      * Insert at end
+     * TC: O(n)
+     * SC: O(1)
+     * <p>
+     * Note: Can be optimized to TC: O(1) using a tail pointer
      */
     public void insertAtEnd(int val) {
         Node newNode = new Node(val);
@@ -71,6 +83,8 @@ public class SinglyLinkedList {
 
     /**
      * Insert at specific position (0-based)
+     * TC: O(n)
+     * SC: O(1)
      */
     public void insertAtPosition(int val, int pos) {
         if (pos < 0 || pos > size) {
