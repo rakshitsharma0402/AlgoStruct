@@ -68,6 +68,7 @@ public class SinglyLinkedList {
 
         if (isEmpty()) {
             insertAtBeginning(val);
+            return;
         }
 
         Node curr = head;
@@ -148,6 +149,7 @@ public class SinglyLinkedList {
 
         if (pos == 0) {
             deleteAtBeginning();
+            return;
         }
 
         Node curr = head;
