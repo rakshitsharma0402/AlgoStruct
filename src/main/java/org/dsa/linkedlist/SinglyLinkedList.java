@@ -28,7 +28,6 @@ public class SinglyLinkedList {
     public void traverse() {
         if (isEmpty()) {
             throw new IndexOutOfBoundsException("Linked List is Empty");
-            return;
         }
 
         Node curr = head;
