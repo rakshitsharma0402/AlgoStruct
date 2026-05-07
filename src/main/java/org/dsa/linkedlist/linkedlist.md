@@ -13,11 +13,7 @@ linkedlist/
 │   ├── traverse()
 │   ├── size()
 │   ├── isEmpty()
-│   ├── reverse()
-│   ├── getMiddle()
-│   ├── detectLoop()
-│   ├── clear()
-│   └── sort()
+│   └── reverse()
 │
 ├── DoublyLinkedList.java
 │   ├── insertAtBeginning()
