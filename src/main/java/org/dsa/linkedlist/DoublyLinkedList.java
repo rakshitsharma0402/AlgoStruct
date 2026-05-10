@@ -204,4 +204,22 @@ public class DoublyLinkedList {
         curr.next = curr.next.next;
         curr.next.prev = curr;
     }
+
+    /**
+     * Search Element
+     * TC: O(n)
+     * SC: O(1)
+     */
+    public int search(int val) {
+        int pos = 0;
+
+        for (Node curr = head; curr != null; curr = curr.next) {
+            if (curr.data == val) {
+                return pos;
+            }
+            pos++;
+        }
+
+        return -1;
+    }
 }
