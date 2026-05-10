@@ -101,7 +101,7 @@ public class DoublyLinkedList {
 
     /**
      * Insert at specific position
-     * TC: O(n)
+     * TC: O(pos)
      * SC: O(1)
      */
     public void insertAtPosition(int val, int pos) {
@@ -133,5 +133,75 @@ public class DoublyLinkedList {
 
         curr.next.prev = newNode;
         curr.next = newNode;
+    }
+
+    /**
+     * Delete From Beginning
+     * TC: O(1)
+     * SC: O(1)
+     */
+    public void deleteFromBeginning() {
+        if (isEmpty()) {
+            throw new IndexOutOfBoundsException("Linked List Empty");
+        }
+
+        if (head.next == null) {
+            head = null;
+            tail = null;
+            return;
+        }
+
+        head = head.next;
+        head.prev = null;
+    }
+
+    /**
+     * Delete From End
+     * TC: O(1)
+     * SC: O(1)
+     */
+    public void deleteFromEnd() {
+        if (isEmpty()) {
+            throw new IndexOutOfBoundsException("Linked List Empty");
+        }
+
+        if (head.next == null) {
+            head = null;
+            tail = null;
+            return;
+        }
+
+        tail = tail.prev;
+        tail.next = null;
+    }
+
+    /**
+     * Delete From End
+     * TC: O(pos)
+     * SC: O(1)
+     */
+    public void deleteAtPosition(int pos) {
+        if (isEmpty() || pos < 0 || pos >= size()) {
+            throw new IndexOutOfBoundsException("Invalid Position");
+        }
+
+        if (pos == 0) {
+            deleteFromBeginning();
+            return;
+        }
+
+        if (pos == size() - 1) {
+            deleteFromEnd();
+            return;
+        }
+
+        Node curr = head;
+
+        for (int i = 0; i < pos - 1; i++) {
+            curr = curr.next;
+        }
+
+        curr.next = curr.next.next;
+        curr.next.prev = curr;
     }
 }

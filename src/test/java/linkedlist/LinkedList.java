@@ -1,3 +1,5 @@
+package linkedlist;
+
 import org.dsa.linkedlist.SinglyLinkedList;
 import java.util.Scanner;
 

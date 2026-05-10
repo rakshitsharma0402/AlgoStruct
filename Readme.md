@@ -88,17 +88,38 @@ AlgoStruct/
 │           
 │   └── test/
 │       └── java/
-│           └── Array.java
-│           └── String.java
-│           └── LinkedList.java
-│           └── Stack.java
-│           └── Queue.java
-│           └── Tree.java
-│           └── Heap.java
-│           └── HashMap.java
-│           └── Graph.java
-│           └── Recursion.java
-│           └── Utils.java
+│           ├── arrays/
+│           │   └── Arrays.java
+│
+│           ├── strings/
+│           │   └── String.java
+│
+│           ├── linkedlist/
+│           │   └── LinkedList.java
+│
+│           ├── stack/
+│           │   └── Stack.java
+│
+│           ├── queue/
+│           │   └── Queue.java
+│
+│           ├── tree/
+│           │   └── Tree.java
+│
+│           ├── heap/
+│           │   └── Heap.java
+│
+│           ├── hashmap/
+│           │   └── HashMap.java
+│
+│           ├── graph/
+│           │   └── Graph.java
+│
+│           ├── recursion/
+│           │   └── Recurssion.java
+│
+│           └── utils/
+│               └── Utils.java
 │           
 ├── README.md
 ├── pom.xml 
