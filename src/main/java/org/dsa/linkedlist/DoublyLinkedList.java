@@ -2,8 +2,8 @@ package org.dsa.linkedlist;
 
 public class DoublyLinkedList {
 
-    Node head;
-    Node tail;
+    private Node head;
+    private Node tail;
 
     /**
      * Check if list is empty

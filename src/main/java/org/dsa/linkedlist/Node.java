@@ -4,11 +4,11 @@ package org.dsa.linkedlist;
  * Node class
  */
 public class Node {
-    int data;
-    Node next;
-    Node prev;
+    public int data;
+    public Node next;
+    public Node prev;
 
-    Node(int data) {
+    public Node(int data) {
         this.data = data;
         this.next = null;
         this.prev = null;
